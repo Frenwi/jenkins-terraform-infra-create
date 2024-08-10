@@ -21,3 +21,8 @@ module "prod-instance" {
   ec2_name      = var.ec2_name
   instance_type = var.instance_type
 }
+
+module "webhook_bucket" {
+  source      = "./s3"
+  bucket_name = var.webhook_bucket
+}
