@@ -60,13 +60,9 @@ pipeline {
         }
         
         stage('Manual approval') {
-
             steps {
-
                 input 'Approval required for deployment'
-
             }
-
         }
  
         
