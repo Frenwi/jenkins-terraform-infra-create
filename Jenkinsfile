@@ -59,7 +59,7 @@ pipeline {
             }
         }
         
-        stage('Manual approval to create') {
+        stage('Manual approval') {
             steps {
                 input 'Approval required for deployment'
             }
@@ -74,11 +74,6 @@ pipeline {
         }
 
 
-        stage('Manual approval to delete') {
-            steps {
-                input 'Approval required for deployment'
-            }
-        }
         stage('Terraform Destroy') {
             steps {
                 echo 'Terraform Destroy...'
