@@ -74,7 +74,7 @@ pipeline {
         }
 
 
-      #stage('Terraform Destroy') {
+    # stage('Terraform Destroy') {
             steps {
                 echo 'Terraform Destroy...'
                 sh 'terraform destroy -var-file="./prod-values.tfvars" --auto-approve'
