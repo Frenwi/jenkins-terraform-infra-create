@@ -27,7 +27,7 @@ pipeline {
             }
         }
 
-        # stage('Verify Terraform Version') {
+        stage('Verify Terraform Version') {
             steps {
                 echo 'verifying the terrform version...'
                 sh 'terraform --version'
@@ -74,7 +74,7 @@ pipeline {
         }
 
 
-        stage('Terraform Destroy') {
+      #stage('Terraform Destroy') {
             steps {
                 echo 'Terraform Destroy...'
                 sh 'terraform destroy -var-file="./prod-values.tfvars" --auto-approve'
